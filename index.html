@@ -3,28 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Lezcano Tirado Luis</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"></a>
-
-        <i class="fa-solid fa-bars" class="menu-icon"></i>
-
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#service">Services</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+    <header>
+        <div class="logo">Lezcano Tirado</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="works.html">Works</a>           
+            <a href="#">Bio</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
         </nav>
+        <button class="theme-toggle">☀️</button>
     </header>
-    <script src="script.js"></script>
+
+
+    <main>
+        <section class="intro">
+            <p class="intro-p">Hola, soy un Desarrollador y Analista de Datos en Peru!</p>
+            <div class="content-intro">
+                <div class="text-intro">
+                    <h1>Luis Lezcano T.</h1>
+                    <p>( Analista / Desarrollador / Diseñador )</p>
+                </div>
+                <img src="imagenes/waaa.jpg" alt="Perfil" class="profile-image">
+            </div>
+        </section>
+        
+
+        <section class="work">
+            <h3 class="titulos">Biografia</h3>
+            <p>
+            Estudiante de Ingeniería de Sistemas | VIII Ciclo |. <br> 
+            Con un enfoque en la Programación, Análisis de datos y Big Data.
+            He participado en proyectos académicos y emprendimientos digitales,
+            donde he comenzado a desarrollar habilidades prácticas
+            en el manejo y análisis de grandes volúmenes de datos, aplicando 
+            conocimientos para identificar patrones y apoyar la toma de decisiones.
+            Mi interés está centrado en cómo el análisis de datos masivos puede 
+            influir en la definición de estrategias digitales. Estoy comprometido 
+            en adquirir certificaciones en programación, análisis de datos y Big Data 
+            para mejorar mis habilidades y contribuir de manera significativa en el 
+            ámbito tecnológico.
+            </p>
+            <a href="works.html" class="portfolio-button">-My portfolio-</a>
+        </section>
+
+        <section class="portfolio-section">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="portfolio-grid">
+                <div class="card-text">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="MediScan">
+                    </div>
+                    <h3>MediScan</h3>
+                    <p>aaaaa</p>
+                </div>
+                <div class="card-text">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Route66">
+                    </div>
+                    <h3>Route66</h3>
+                    <p>aaa</p>
+                </div>
+                <div class="card-text">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="MediScan">
+                    </div>
+                    <h3>MediScan</h3>
+                    <p>aaaaa</p>
+                </div>
+                <div class="card-text">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Route66">
+                    </div>
+                    <h3>Route66</h3>
+                    <p>aaa</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bio">
+            <h3 class="titulos">Bio</h3>
+            <ul>
+                <li><b>2003:</b> Nacio en Trujillo, Peru.</li>
+                <li><b>2015</b> Esttudio en el colegio Juan Pablo II</li>
+                <li><b>2024–present:</b> Estudia Stack Mern.</li>
+                <li><b>2024 - 2025:</b> Estudia Ingeniería de Sistemas.</li>  
+            </ul>
+        </section>
+
+        <section class="interests">
+            <h3 class="titulos">I ❤️</h3>
+            <p>Gimnasio, Musica, Tocar el Piano, Programar</p>
+        </section>
+
+        <section class="Redes"> 
+            <h3 class="titulos">Redes</h3>
+            <a href="https://www.linkedin.com/in/luis-lezcano-tirado-66b4b5285">
+                <i class="fa-brands fa-linkedin"></i><span>@LuisLezcanoTirado</span>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-x-twitter"></i><span>@LuisTwitter</span>
+            </a>
+            <a href="https://www.instagram.com/luis_lezcanot/">
+                <i class="fa-brands fa-instagram"></i><span>@lulezcanot</span>
+            </a>
+            <a href="https://github.com/lulezcanot">
+                <i class="fa-brands fa-github"></i><span>@Lulezcanot</span>
+            </a>
+        </section>
+        
+    </main>
 </body>
 </html>
