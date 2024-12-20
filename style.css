@@ -1,43 +1,78 @@
+/* Estilo por defecto (modo claro) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI';
     margin: 0;
     padding: 0;
-    background-color: #202023;
-    color: #fff;
+    background-color: #202023; /* Fondo claro por defecto */
+    color: #fff; /* Texto oscuro por defecto */
     line-height: 1.5;
 }
 
-header {
+
+.header {
+    position: flex;
+    top: 0;
+    padding: 10px;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 80px;
-    background-color: #202023;
+    z-index: 100;
+    
 }
-
-header .logo {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-header nav {
-    display: flex;
-    gap: 45px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav {
-    cursor: pointer;
-}
-
-header .theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
+.logo{
+    font-size: clamp(1.5rem, 5vw, 2rem);
     color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.navbar-links a{
+    position: relative;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.navbar-links a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar-links a:hover::before{
+    width: 100%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links a {
+        margin-left: 40px;
+        font-size: clamp(0.8rem, 4vw, 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: clamp(1.2rem, 6vw, 1.5rem);
+        padding-bottom: 0.7rem;
+    }
+
+    .navbar-links a {
+        margin-left: 10px;
+        font-size: clamp(0.7rem, 5vw, 0.9rem);
+    }
 }
 
 main {
@@ -65,13 +100,13 @@ main {
     max-height: 50px ;
 }
 .text-intro h1 {
-    font-size: 2.5em;
+    font-size:  clamp(1.5rem, 5vw, 2rem);
     padding: 0px auto;
     height: 0.5em;
 }
 
 .text-intro p {
-    font-size: 1em;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     margin: 5px; /* Reduce la separación */
 }
 
@@ -170,55 +205,67 @@ a:hover {
 }
 
 
-/* Secciones */
-.section-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #444;
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.portfolio-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-/* Cuadrícula */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-/* Tarjetas */
-.card {
-    border-radius: 8px;
+.card{
+    display: flex;
+    flex: 1;
+    font-size: .8rem;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 5px;
+    width: 200px;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+    background-color: rgba(65, 65, 65, 0.137);
 }
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.card-img{
+    display: flex;
+    align-content: center;
+    height: 200px;
+    width: 230px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
 .card-text{
-    text-align: center;
+    justify-content: center;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 8px;
+.card-titulo{
+    font-size: 1.3rem;
 }
 
-.card-text h3 {
-    font-size: 1.2rem;
-    margin-bottom:px;
-}
-
-.card-text p {
-    font-size: 0.9rem;
+.card-texto{
     color: #ccc;
     line-height: 1.5;
 }
 
-/* Hover efectos */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+@media (max-width: 430px) {
+    .card-img{
+        height: 180px;
+        width: 180px;
+    }
 }
+
+@media (max-width: 375px) {
+    .card-img{
+        height: 165px;
+        width: 165px;
+    }
+}
+
+
